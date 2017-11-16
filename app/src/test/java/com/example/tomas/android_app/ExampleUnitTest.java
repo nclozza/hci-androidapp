@@ -1,4 +1,4 @@
-package hci_androidapp.autohome;
+package com.example.tomas.android_app;
 
 import org.junit.Test;
 

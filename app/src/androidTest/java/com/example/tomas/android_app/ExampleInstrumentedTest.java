@@ -1,4 +1,4 @@
-package hci_androidapp.autohome;
+package com.example.tomas.android_app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("hci_androidapp.autohome", appContext.getPackageName());
+        assertEquals("com.example.tomas.android_app", appContext.getPackageName());
     }
 }
