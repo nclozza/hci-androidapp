@@ -1,6 +1,7 @@
 package com.example.tomas.android_app;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -66,8 +67,13 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                //Aaa tenemos qeu chequear si estamos fuera de una habitación o en una habitación
+                //Para saber si agregar dispositivo o habitación
+                Intent intent = new Intent(MainActivity.this, AddRoom.class);
+                startActivity(intent);
+
             }
         });
 
@@ -100,8 +106,18 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.action_settings:
+                Intent intent = new Intent(MainActivity.this, Settings.class);
+                startActivity(intent);
                 //do stuff
-                break;
+                return true;
+            case R.id.action_routines:
+                Intent intent2 = new Intent(MainActivity.this, Routines.class);
+                startActivity(intent2);
+                return true;
+            case R.id.action_notification:
+                Intent intent3 = new Intent(MainActivity.this, Notifications.class);
+                startActivity(intent3);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

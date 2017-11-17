@@ -12,5 +12,9 @@
     <string name="action_notifications">Notifications</string>
     <string name="action_routines">Routines</string>
     <string name="panel_title">Panel 1</string>
+    <string name="testing">testing routines tap</string>
+    <string name="testing2">testing notifications tap</string>
+    <string name="here_addRoom">Type the room\'s name</string>
+    <string name="room_name">Room name...</string>
 
 </resources>
