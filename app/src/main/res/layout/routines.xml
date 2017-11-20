@@ -16,16 +16,19 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
-        <EditText
-            android:id="@+id/editText3"
+        <TextView
+            android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/testing" />
+            android:text="@string/create_execute_routine"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

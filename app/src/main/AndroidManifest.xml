@@ -24,6 +24,10 @@
             android:label="AutoHome - Routines" >
         </activity>
         <activity
+            android:name=".SelectRoomToDisplay"
+            android:label="AutoHome - Select your favorite Rooms" >
+        </activity>
+        <activity
             android:name=".Settings"
             android:label="AutoHome - Settings" >
         </activity>
