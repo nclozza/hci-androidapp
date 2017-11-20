@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        RoomsAPI.getAllRooms(this);
+        //RoomsAPI.getAllRooms(this);
     }
 
 
