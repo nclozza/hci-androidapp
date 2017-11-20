@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.ToggleButton;
 
 public class Blind extends AppCompatActivity {
 
@@ -14,18 +16,14 @@ public class Blind extends AppCompatActivity {
         setContentView(R.layout.blind);
 
 
-        Button on = findViewById(R.id.on);
-        on.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-            }
-        });
-
-
-        Button off = findViewById(R.id.off);
-        off.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
+        ToggleButton updown = (ToggleButton) findViewById(R.id.updown);
+        updown.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    // The toggle is enabled
+                } else {
+                    // The toggle is disabled
+                }
             }
         });
     }

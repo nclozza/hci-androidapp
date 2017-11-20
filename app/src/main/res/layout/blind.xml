@@ -16,25 +16,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <Button
-            android:id="@+id/on"
+        <ToggleButton
+            android:id="@+id/updown"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
             android:layout_marginEnd="15dp"
-            android:layout_row="0"
-            android:backgroundTint="@color/colorButton"
-            android:text="On" />
+            android:layout_row="3"
+            android:textOn="down"
+            android:textOff="up"/>
 
-        <Button
-            android:id="@+id/off"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:layout_marginEnd="15dp"
-            android:layout_row="1"
-            android:backgroundTint="@color/colorButton"
-            android:text="Off" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
