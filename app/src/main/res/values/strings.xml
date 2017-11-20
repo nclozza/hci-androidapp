@@ -16,5 +16,15 @@
     <string name="testing2">testing notifications tap</string>
     <string name="here_addRoom">Type the room\'s name</string>
     <string name="room_name">Room name...</string>
+    <string name="name">Name</string>
+    <string name="type_the_dispositive_s_name">Type the dispositive\'s name</string>
+    <string name="select_notifications">Select the notifications you want to receive</string>
+    <string name="turn_off_on_n">Turn off/on dispositive</string>
+    <string name="routine_created">Routine/s created</string>
+    <string name="blind_down_up">Blind down or up</string>
+    <string name="lamp_on_off">Lamp on or off</string>
+    <string name="create_execute_routine">Create or run a routine</string>
+    <string name="empty">Empty</string>
+
 
 </resources>
