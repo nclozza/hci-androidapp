@@ -206,7 +206,7 @@ public class Dispositives  extends AppCompatActivity {
                     }
                 });
                 break;
-            
+
         }
     }
 }
