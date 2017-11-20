@@ -24,5 +24,7 @@
     <string name="blind_down_up">Blind down or up</string>
     <string name="lamp_on_off">Lamp on or off</string>
     <string name="create_execute_routine">Create or run a routine</string>
+    <string name="empty">Empty</string>
+
 
 </resources>

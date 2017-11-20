@@ -8,6 +8,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.example.tomas.android_app.Rooms;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -19,7 +22,7 @@ public class RoomsAPI {
     /**
      * Retrieve all rooms
      */
-    public static void getAllRooms(Context context) {
+    public static void getAllRooms(final Context context) {
 
         JsonObjectRequest jsonObjectReq = new JsonObjectRequest(Request.Method.GET,
             BASE_URL + "rooms",
@@ -28,6 +31,19 @@ public class RoomsAPI {
                 @Override
                 public void onResponse(JSONObject response) {
                     Log.d("getAllRooms", response.toString());
+
+                    Gson gson;
+                    GsonBuilder gsonBuilder = new GsonBuilder();
+                    gson = gsonBuilder.create();
+
+                    Rooms rooms = gson.fromJson(response.toString(), Rooms.class);
+
+                    Log.i("Rooms", rooms.toString());
+                    for (Rooms.Room eachRoom : rooms.getRooms()) {
+                        Log.i("Room", eachRoom.getName());
+                    }
+
+
                 }
             },
             new Response.ErrorListener() {

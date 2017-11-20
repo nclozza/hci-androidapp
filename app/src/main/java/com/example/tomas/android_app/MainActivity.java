@@ -86,9 +86,13 @@ public class MainActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
                 //Aaa tenemos qeu chequear si estamos fuera de una habitación o en una habitación
                 //Para saber si agregar dispositivo o habitación
+                Intent intent = new Intent(MainActivity.this, AddRoom.class);
+                startActivity(intent);
+
             }
         });
 
+        //RoomsAPI.getAllRooms(this);
     }
 
 
