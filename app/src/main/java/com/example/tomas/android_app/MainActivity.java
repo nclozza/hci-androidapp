@@ -58,25 +58,37 @@ public class MainActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+//        tabLayout.getSelectedTabPosition();
+
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
+
+
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int currentTab = tabLayout.getSelectedTabPosition();
+                //Where 0 is FAVORITOS and 1 is HABITACIONES
+
+                if (currentTab == 1) {
+                    Intent intent = new Intent(MainActivity.this, AddRoom.class);
+                    startActivity(intent);
+                } else if (currentTab == 0){
+                    Intent intent = new Intent(MainActivity.this, SelectRoomToDisplay.class);
+                    startActivity(intent);
+                }
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
                 //Aaa tenemos qeu chequear si estamos fuera de una habitación o en una habitación
                 //Para saber si agregar dispositivo o habitación
-                Intent intent = new Intent(MainActivity.this, AddRoom.class);
-                startActivity(intent);
-
             }
         });
+
     }
 
 
