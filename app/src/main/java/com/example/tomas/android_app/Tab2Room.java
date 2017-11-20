@@ -4,15 +4,13 @@ package com.example.tomas.android_app;
  * Created by tomas on 15/11/2017.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.GridLayout;
-import android.widget.LinearLayout;
 
 public class Tab2Room extends Fragment {
 
@@ -21,9 +19,6 @@ public class Tab2Room extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.tab2room, container, false);
 
-
-
-
         int room = 1;
 
         switch (room) {
@@ -31,7 +26,8 @@ public class Tab2Room extends Fragment {
                     button1.setText("roomName");
                     button1.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
-                            // Code here executes on main thread after user presses button
+                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                            startActivity(intent);
                         }
                     });
                     break;
