@@ -22,27 +22,26 @@ public class AddDispo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_dispo);
 
-//        tv=(TextView)findViewById(R.id.editRoom);
+        tv=(TextView)findViewById(R.id.editDisp);
 //        tv.setMovementMethod(new ScrollingMovementMethod());
-//
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.doneAD);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-////                dispName=(EditText)findViewById(R.id.editDisp);
-////                tv.setText("Your input: \n" + dispName.getText().toString());
-//
-//            }
-//        });
-//
-//        FloatingActionButton back = (FloatingActionButton) findViewById(R.id.backAD);
-//        back.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(AddDispo.this, RoomActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+
+        FloatingActionButton done = (FloatingActionButton) findViewById(R.id.doneAD);
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dispName=(EditText)findViewById(R.id.editDisp);
+                tv.setText("Your input: \n" + dispName.getText().toString());
+            }
+        });
+
+        FloatingActionButton back = (FloatingActionButton) findViewById(R.id.backAD);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AddDispo.this, RoomActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
