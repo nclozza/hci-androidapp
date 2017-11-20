@@ -25,6 +25,7 @@ public class Notifications extends AppCompatActivity {
         final CheckBox ch2= findViewById(R.id.checkBox2);
         final CheckBox ch3 = findViewById(R.id.checkBox3);
         final CheckBox ch4 = findViewById(R.id.checkBox4);
+        final CheckBox ch5 = findViewById(R.id.checkBox5);
 
         ch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -59,6 +60,15 @@ public class Notifications extends AppCompatActivity {
                     Log.i("LA CUARTA", "OK");
                 else
                     Log.i("LA CUARTA", "NO OK");
+            }
+        });
+
+        ch5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (ch.isChecked())
+                    Log.i("LA QUINTA", "OK");
+                else
+                    Log.i("LA QUINTA", "NO OK");
             }
         });
 

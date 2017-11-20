@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/doneB"
+        android:id="@+id/doneAD"
         android:layout_width="46dp"
         android:layout_height="54dp"
         android:layout_marginBottom="8dp"
@@ -23,7 +23,7 @@
         app:srcCompat="@drawable/ic_done_white_24px" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/backB"
+        android:id="@+id/backAD"
         android:layout_width="47dp"
         android:layout_height="64dp"
         android:layout_marginBottom="8dp"
@@ -42,7 +42,7 @@
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <EditText
-        android:id="@+id/editRoom"
+        android:id="@+id/editDisp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="408dp"

@@ -3,31 +3,34 @@ package com.example.tomas.android_app;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Rooms {
+public class Devices {
 
-    List<Room> rooms;
+    List<Device> devices;
 
-    public Rooms() {
-        this.rooms = new LinkedList<>();
+    public Devices() {
+        this.devices = new LinkedList<>();
     }
 
-    public Rooms(List<Room> rooms) {
-        this.rooms = rooms;
+    public Devices(List<Device> devices) {
+        this.devices = devices;
     }
 
-    public List<Room> getRooms() {
-        return rooms;
+    public List<Device> getDevices() {
+        return devices;
     }
 
-    public static class Room {
+
+    public static class Device {
 
         private String id;
         private String name;
+        private String typeId;
         private String meta;
 
-        public Room(String id, String name, String meta) {
+        public Device(String id, String name, String typeId, String meta) {
             this.id = id;
             this.name = name;
+            this.typeId = typeId;
             this.meta = meta;
         }
 
@@ -39,8 +42,13 @@ public class Rooms {
             return name;
         }
 
+        public String getTypeId() {
+            return typeId;
+        }
+
         public String getMeta() {
             return meta;
         }
     }
+
 }

@@ -8,7 +8,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.example.tomas.android_app.Room;
 import com.example.tomas.android_app.Rooms;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -40,7 +39,7 @@ public class RoomsAPI {
                     Rooms rooms = gson.fromJson(response.toString(), Rooms.class);
 
                     Log.i("Rooms", rooms.toString());
-                    for (Room eachRoom : rooms.getRooms()) {
+                    for (Rooms.Room eachRoom : rooms.getRooms()) {
                         Log.i("Room", eachRoom.getName());
                     }
 
