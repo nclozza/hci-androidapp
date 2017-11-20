@@ -9,11 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-/**
- * Created by tomas on 17/11/2017.
- */
-
-
 public class AddDispo extends AppCompatActivity {
     EditText dispName;
     TextView tv;
