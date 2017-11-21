@@ -21,7 +21,8 @@
         </activity>
         <activity
             android:name=".Routines"
-            android:label="AutoHome - Routines" >
+            android:label="AutoHome - Routines"
+            android:parentActivityName="com.example.tomas.android_app.MainActivity" >
         </activity>
         <activity
             android:name=".RoomActivity"
@@ -29,19 +30,23 @@
         </activity>
         <activity
             android:name=".SelectRoomToDisplay"
-            android:label="AutoHome - Favorite Rooms" >
+            android:label="AutoHome - Favorite Rooms"
+            android:parentActivityName="com.example.tomas.android_app.MainActivity">
         </activity>
         <activity
             android:name=".Settings"
-            android:label="AutoHome - Settings" >
+            android:label="AutoHome - Settings"
+            android:parentActivityName="com.example.tomas.android_app.MainActivity">
         </activity>
         <activity
             android:name=".Notifications"
-            android:label="AutoHome - Notifications" >
+            android:label="AutoHome - Notifications"
+            android:parentActivityName="com.example.tomas.android_app.MainActivity">
         </activity>
         <activity
             android:name=".AddRoom"
-            android:label="AutoHome - Adding Rooms" >
+            android:label="AutoHome - Adding Rooms"
+            android:parentActivityName="com.example.tomas.android_app.MainActivity">
         </activity>
         <activity
             android:name=".AddDispo"
@@ -53,7 +58,8 @@
         </activity>
         <activity
             android:name=".Dispositives"
-            android:label="AutoHome - Dispositives" >
+            android:label="AutoHome - Dispositives"
+            android:parentActivityName="com.example.tomas.android_app.MainActivity">
         </activity>
         <activity
             android:name=".Door"

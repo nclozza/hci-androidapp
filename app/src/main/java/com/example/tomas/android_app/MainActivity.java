@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+    private static int lastI = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,23 +51,21 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Create the adapter that will return a fragment for each of the three
+        // Create the adapter that will return a fragment for each of the two
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
+
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
-        final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-//        tabLayout.getSelectedTabPosition();
-
+                final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        Log.i("LAST I = ", String.valueOf(lastI));
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
-
-
-
+        mViewPager.setCurrentItem(lastI);
+        lastI = 0;
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 //Where 0 is FAVORITOS and 1 is HABITACIONES
 
                 if (currentTab == 1) {
+                    lastI = 1;
                     Intent intent = new Intent(MainActivity.this, AddRoom.class);
                     startActivity(intent);
                 } else if (currentTab == 0){
@@ -86,8 +86,8 @@ public class MainActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
                 //Aaa tenemos qeu chequear si estamos fuera de una habitación o en una habitación
                 //Para saber si agregar dispositivo o habitación
-                Intent intent = new Intent(MainActivity.this, AddRoom.class);
-                startActivity(intent);
+//                Intent intent = new Intent(MainActivity.this, AddRoom.class);
+//                startActivity(intent);
 
             }
         });
@@ -95,6 +95,14 @@ public class MainActivity extends AppCompatActivity {
         //RoomsAPI.getAllRooms(this);
     }
 
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            finish();
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

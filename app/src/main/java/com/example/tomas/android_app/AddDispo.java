@@ -26,6 +26,10 @@ public class AddDispo extends AppCompatActivity {
             public void onClick(View view) {
                 dispName=(EditText)findViewById(R.id.editDisp);
                 tv.setText("Your input: \n" + dispName.getText().toString());
+                /* Uncomment this when correct adddispo called
+                Intent intent = new Intent(AddDispo.this, MainActivity.class);
+                startActivity(intent);
+                */
             }
         });
 

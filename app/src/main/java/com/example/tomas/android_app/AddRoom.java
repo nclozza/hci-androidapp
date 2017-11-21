@@ -43,6 +43,8 @@ public class AddRoom extends AppCompatActivity {
             public void onClick(View view) {
                 roomName = findViewById(R.id.editRoom);
                 addRoom(getApplicationContext(), roomName.getText().toString());
+                Intent intent = new Intent(AddRoom.this, MainActivity.class);
+                startActivity(intent);
                 //We have to pop the current Activity after created the new room to return to de previous one
             }
         });
@@ -53,10 +55,15 @@ public class AddRoom extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(AddRoom.this, MainActivity.class);
                 startActivity(intent);
-
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(AddRoom.this, MainActivity.class));
+        finish();
     }
 
     public static void addRoom(Context context, String name) {
