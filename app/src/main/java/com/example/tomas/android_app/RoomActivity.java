@@ -20,10 +20,6 @@ import com.google.gson.GsonBuilder;
 
 import org.json.JSONObject;
 
-/**
- * Created by tomas on 20/11/2017.
- */
-
 public class RoomActivity extends AppCompatActivity {
 
     private static String BASE_URL = "http://10.0.2.2:8080/api/";

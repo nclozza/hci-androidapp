@@ -9,10 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-/**
- * Created by tomas on 19/11/2017.
- */
-
 public class SelectRoomToDisplay extends AppCompatActivity {
 
     @Override

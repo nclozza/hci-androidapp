@@ -1,9 +1,5 @@
 package com.example.tomas.android_app;
 
-/**
- * Created by tomas on 15/11/2017.
- */
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;

@@ -12,10 +12,6 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-/**
- * Created by tomas on 17/11/2017.
- */
-
 public class Notifications extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
