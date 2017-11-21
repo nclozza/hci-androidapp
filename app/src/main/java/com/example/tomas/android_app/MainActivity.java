@@ -1,8 +1,11 @@
 package com.example.tomas.android_app;
 
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -51,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
         // Create the adapter that will return a fragment for each of the two
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -77,18 +82,13 @@ public class MainActivity extends AppCompatActivity {
                 if (currentTab == 1) {
                     lastI = 1;
                     Intent intent = new Intent(MainActivity.this, AddRoom.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 } else if (currentTab == 0){
                     Intent intent = new Intent(MainActivity.this, SelectRoomToDisplay.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-                //Aaa tenemos qeu chequear si estamos fuera de una habitación o en una habitación
-                //Para saber si agregar dispositivo o habitación
-//                Intent intent = new Intent(MainActivity.this, AddRoom.class);
-//                startActivity(intent);
-
             }
         });
 
@@ -97,11 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (getFragmentManager().getBackStackEntryCount() > 0) {
-            getFragmentManager().popBackStack();
-        } else {
-            finish();
-        }
+        finish();
     }
 
     @Override
