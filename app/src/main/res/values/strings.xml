@@ -25,6 +25,7 @@
     <string name="lamp_on_off">Lamp on or off</string>
     <string name="create_execute_routine">Create or run a routine</string>
     <string name="empty">Empty</string>
+    <string name="device_not_implemented">We don\'t support this device yet</string>
 
 
 </resources>
