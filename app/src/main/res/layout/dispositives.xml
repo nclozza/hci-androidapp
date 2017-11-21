@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="352dp"
+        android:layout_height="479dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/dispositive1"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="0"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dispositive2"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="0"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dispositive3"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="1"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dispositive4"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="1"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dispositive5"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="2"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dispositive6"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="2"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dispositive7"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="3"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dispositive8"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="3"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dispositive9"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="4"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dispositive10"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="4"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dispositive11"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="5"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dispositive12"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="5"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dispositive13"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="6"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dispositive14"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="6"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+
+        <Button
+            android:id="@+id/dispositive15"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="7"
+            android:backgroundTint="@color/colorButton"
+
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+
+        <Button
+            android:id="@+id/dispositive16"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="14dp"
+            android:layout_marginEnd="15dp"
+            android:layout_row="7"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/empty"
+            android:visibility="invisible" />
+
+    </GridLayout>
+</android.support.constraint.ConstraintLayout>
