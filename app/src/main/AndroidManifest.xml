@@ -47,6 +47,26 @@
             android:name=".AddDispo"
             android:label="AutoHome - Adding Dispositive" >
         </activity>
+        <activity
+            android:name=".Blind"
+            android:label="AutoHome - Blind" >
+        </activity>
+        <activity
+            android:name=".Dispositives"
+            android:label="AutoHome - Dispositives" >
+        </activity>
+        <activity
+            android:name=".Door"
+            android:label="AutoHome - Door" >
+        </activity>
+        <activity
+            android:name=".Lamp"
+            android:label="AutoHome - Lamp" >
+        </activity>
+        <activity
+            android:name=".Timer"
+            android:label="AutoHome - Timer" >
+        </activity>
     </application>
 
 </manifest>
