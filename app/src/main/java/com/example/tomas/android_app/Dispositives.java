@@ -3,6 +3,7 @@ package com.example.tomas.android_app;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -35,7 +36,26 @@ public class Dispositives  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dispositives);
 
+        /*
+        FloatingActionButton add = findViewById(R.id.addD);
+        FloatingActionButton back = findViewById(R.id.backD);
 
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Dispositives.this, AddDispo.class);
+                startActivity(intent);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Dispositives.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+       */
         int i = 1;
 
         switch (i) {

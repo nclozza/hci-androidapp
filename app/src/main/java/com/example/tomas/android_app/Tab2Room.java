@@ -55,7 +55,7 @@ public class Tab2Room extends Fragment {
                                     button1.setText(eachRoom.getName());
                                     button1.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
