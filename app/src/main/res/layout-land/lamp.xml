@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="368dp"
         android:layout_height="495dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="150dp"
         android:layout_marginTop="32dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,8 +23,8 @@
             android:layout_marginBottom="50dp"
             android:layout_marginEnd="15dp"
             android:layout_row="3"
-            android:textOn="on"
-            android:textOff="off"/>
+            android:textOff="off"
+            android:textOn="on" />
 
         <TextView
             android:id="@+id/textView7"

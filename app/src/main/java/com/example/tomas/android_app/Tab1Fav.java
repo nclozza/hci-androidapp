@@ -18,5 +18,4 @@ public class Tab1Fav extends Fragment {
     }
 
 
-
 }

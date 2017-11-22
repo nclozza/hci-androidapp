@@ -1,8 +1,11 @@
 package com.example.tomas.android_app;
 
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+    private static int lastI = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,23 +54,23 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Create the adapter that will return a fragment for each of the three
+
+
+        // Create the adapter that will return a fragment for each of the two
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
+
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
-        final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-//        tabLayout.getSelectedTabPosition();
-
+                final TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        Log.i("LAST I = ", String.valueOf(lastI));
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
-
-
-
+        mViewPager.setCurrentItem(lastI);
+        lastI = 0;
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -76,25 +80,25 @@ public class MainActivity extends AppCompatActivity {
                 //Where 0 is FAVORITOS and 1 is HABITACIONES
 
                 if (currentTab == 1) {
+                    lastI = 1;
                     Intent intent = new Intent(MainActivity.this, AddRoom.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 } else if (currentTab == 0){
                     Intent intent = new Intent(MainActivity.this, SelectRoomToDisplay.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-                //Aaa tenemos qeu chequear si estamos fuera de una habitación o en una habitación
-                //Para saber si agregar dispositivo o habitación
-                Intent intent = new Intent(MainActivity.this, AddRoom.class);
-                startActivity(intent);
-
             }
         });
 
         //RoomsAPI.getAllRooms(this);
     }
 
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
