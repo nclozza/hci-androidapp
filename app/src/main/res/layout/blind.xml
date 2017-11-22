@@ -23,8 +23,8 @@
             android:layout_marginBottom="30dp"
             android:layout_marginEnd="15dp"
             android:layout_row="3"
-            android:textOn="down"
-            android:textOff="up"/>
+            android:textOn="@string/down"
+            android:textOff="@string/up"/>
 
 
     </LinearLayout>

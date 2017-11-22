@@ -2,7 +2,6 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -23,8 +22,8 @@
             android:layout_marginBottom="30dp"
             android:layout_marginEnd="15dp"
             android:layout_row="3"
-            android:textOff="up"
-            android:textOn="down" />
+            android:textOff="@string/up"
+            android:textOn="@string/down" />
 
 
     </LinearLayout>

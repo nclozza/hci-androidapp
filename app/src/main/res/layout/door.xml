@@ -24,8 +24,8 @@
             android:layout_marginBottom="30dp"
             android:layout_marginEnd="15dp"
             android:layout_row="3"
-            android:textOn="closed"
-            android:textOff="opened"/>
+            android:textOn="@string/closed"
+            android:textOff="@string/open"/>
 
 
         <ToggleButton
@@ -35,8 +35,8 @@
             android:layout_marginBottom="30dp"
             android:layout_marginEnd="15dp"
             android:layout_row="3"
-            android:textOn="locked"
-            android:textOff="unlocked"/>
+            android:textOn="@string/locked"
+            android:textOff="@string/unlocked"/>
 
 
     </LinearLayout>

@@ -25,10 +25,6 @@
             android:label="AutoHome - Routines">
         </activity>
         <activity
-            android:name=".RoomActivity"
-            android:label="AutoHome - Room" >
-        </activity>
-        <activity
             android:name=".SelectRoomToDisplay"
             android:label="AutoHome - Favorite Rooms">
         </activity>
@@ -63,6 +59,10 @@
         <activity
             android:name=".devices.Lamp"
             android:label="AutoHome - Lamp" >
+        </activity>
+        <activity
+            android:name=".devices.Timer"
+            android:label="AutoHome - Timer" >
         </activity>
         <activity
             android:name=".devices.NoDeviceYet"

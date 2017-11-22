@@ -36,7 +36,7 @@ public class AddDispo extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AddDispo.this, RoomActivity.class);
+                Intent intent = new Intent(AddDispo.this, Dispositives.class);
                 startActivity(intent);
             }
         });

@@ -26,6 +26,22 @@
     <string name="create_execute_routine">Create or run a routine</string>
     <string name="empty">Empty</string>
     <string name="device_not_implemented">We don\'t support this device yet</string>
+    <string name="down">down</string>
+    <string name="up">up</string>
+    <string name="brightness">Brightness</string>
+    <string name="off">off</string>
+    <string name="on">on</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="unlock">unlock</string>
+    <string name="lock">lock</string>
+    <string name="closed">closed</string>
+    <string name="locked">locked</string>
+    <string name="unlocked">unlocked</string>
+    <string name="we_are_not_going_to_implement_this">We are not going to implement this</string>
+    <string name="stop">stop</string>
+    <string name="start">start</string>
 
 
 </resources>

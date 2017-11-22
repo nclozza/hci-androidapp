@@ -2,7 +2,6 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -20,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.104"
-        app:srcCompat="@drawable/ic_done_white_24px" />
+        app:srcCompat="@drawable/ic_done_white_24px"
+        android:focusable="true" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/backAD"
@@ -39,7 +39,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.104"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        android:focusable="true" />
 
     <EditText
         android:id="@+id/editDisp"
