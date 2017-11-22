@@ -49,7 +49,7 @@
             android:label="AutoHome - Adding Dispositive" >
         </activity>
         <activity
-            android:name=".Blind"
+            android:name=".devices.Blinds"
             android:label="AutoHome - Blind" >
         </activity>
         <activity
@@ -57,15 +57,15 @@
             android:label="AutoHome - Dispositives">
         </activity>
         <activity
-            android:name=".Door"
+            android:name=".devices.Door"
             android:label="AutoHome - Door" >
         </activity>
         <activity
-            android:name=".Lamp"
+            android:name=".devices.Lamp"
             android:label="AutoHome - Lamp" >
         </activity>
         <activity
-            android:name=".Timer"
+            android:name=".devices.Timer"
             android:label="AutoHome - Timer" >
         </activity>
     </application>

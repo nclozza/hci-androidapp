@@ -1,9 +1,11 @@
-package com.example.tomas.android_app;
+package com.example.tomas.android_app.devices;
 
 
 import android.os.Bundle;
 
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.tomas.android_app.R;
 
 /**
  * Created by tomas on 21/11/2017.

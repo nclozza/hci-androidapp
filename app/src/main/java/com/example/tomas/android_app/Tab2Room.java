@@ -51,7 +51,7 @@ public class Tab2Room extends Fragment {
                                     button1.setText(eachRoom.getName());
                                     button1.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -64,7 +64,7 @@ public class Tab2Room extends Fragment {
                                     button2.setText(eachRoom.getName());
                                     button2.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -78,7 +78,7 @@ public class Tab2Room extends Fragment {
                                     button3.setText(eachRoom.getName());
                                     button3.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -92,7 +92,7 @@ public class Tab2Room extends Fragment {
                                     button4.setText(eachRoom.getName());
                                     button4.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -105,7 +105,7 @@ public class Tab2Room extends Fragment {
                                     button5.setText(eachRoom.getName());
                                     button5.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -118,7 +118,7 @@ public class Tab2Room extends Fragment {
                                     button6.setText(eachRoom.getName());
                                     button6.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -131,7 +131,7 @@ public class Tab2Room extends Fragment {
                                     button7.setText(eachRoom.getName());
                                     button7.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -144,7 +144,7 @@ public class Tab2Room extends Fragment {
                                     button8.setText(eachRoom.getName());
                                     button8.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -157,7 +157,7 @@ public class Tab2Room extends Fragment {
                                     button9.setText(eachRoom.getName());
                                     button9.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -170,7 +170,7 @@ public class Tab2Room extends Fragment {
                                     button10.setText(eachRoom.getName());
                                     button10.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -183,7 +183,7 @@ public class Tab2Room extends Fragment {
                                     button11.setText(eachRoom.getName());
                                     button11.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -196,7 +196,7 @@ public class Tab2Room extends Fragment {
                                     button12.setText(eachRoom.getName());
                                     button12.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -209,7 +209,7 @@ public class Tab2Room extends Fragment {
                                     button13.setText(eachRoom.getName());
                                     button13.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -222,7 +222,7 @@ public class Tab2Room extends Fragment {
                                     button14.setText(eachRoom.getName());
                                     button14.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(getActivity(), RoomActivity.class);
+                                            Intent intent = new Intent(getActivity(), Dispositives.class);
                                             intent.putExtra("roomId", eachRoom.getId());
                                             startActivity(intent);
                                         }
@@ -233,8 +233,6 @@ public class Tab2Room extends Fragment {
 
                             i++;
                         }
-
-
                     }
                 },
                 new Response.ErrorListener() {
