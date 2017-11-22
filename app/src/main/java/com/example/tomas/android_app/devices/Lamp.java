@@ -18,6 +18,7 @@ import com.example.tomas.android_app.states.LampState;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 
@@ -75,6 +76,47 @@ public class Lamp extends AppCompatActivity {
             }
         };
 
+        final SeekBar.OnSeekBarChangeListener seekBarChangeListener = new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                JSONObject jsonObject = new JSONObject();
+
+                try {
+                    jsonObject.accumulate("0", i);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                
+                JsonObjectRequest jsonObjectReq = new JsonObjectRequest(Request.Method.PUT,
+                        SingletonAPI.BASE_URL + "devices/" + deviceId + "/" + "changeBrightness",
+                        jsonObject,
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                Log.i("runActionInDevice", response.toString());
+                            }
+                        },
+                        new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                VolleyLog.d("runActionInDevice", "Error: " + error.getMessage());
+                            }
+                        });
+
+                SingletonAPI.getInstance(getApplicationContext()).addToRequestQueue(jsonObjectReq, "runActionInDevice");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        };
+
         JsonObjectRequest jsonObjectReq = new JsonObjectRequest(Request.Method.PUT,
                 SingletonAPI.BASE_URL + "devices/" + deviceId + "/" + "getState",
                 new JSONObject(),
@@ -99,6 +141,7 @@ public class Lamp extends AppCompatActivity {
 
                         onoff.setOnCheckedChangeListener(onCheckedChangeListener);
                         brightness.setProgress(result.getResult().getBrightness());
+                        brightness.setOnSeekBarChangeListener(seekBarChangeListener);
                     }
                 },
                 new Response.ErrorListener() {

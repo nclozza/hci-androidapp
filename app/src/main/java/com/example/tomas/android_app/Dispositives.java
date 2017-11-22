@@ -17,6 +17,7 @@ import com.example.tomas.android_app.API.SingletonAPI;
 import com.example.tomas.android_app.devices.Blinds;
 import com.example.tomas.android_app.devices.Door;
 import com.example.tomas.android_app.devices.Lamp;
+import com.example.tomas.android_app.devices.NoDeviceYet;
 import com.example.tomas.android_app.devices.Timer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -320,7 +321,7 @@ public class Dispositives extends AppCompatActivity {
                 break;
 
             default:
-                intent = null;
+                intent = new Intent(dispositivesActivity, NoDeviceYet.class);
         }
 
         return intent;
