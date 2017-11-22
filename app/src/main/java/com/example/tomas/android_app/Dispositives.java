@@ -1,8 +1,12 @@
 package com.example.tomas.android_app;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +39,12 @@ public class Dispositives extends AppCompatActivity {
 
         String roomId = getIntent().getStringExtra("roomId");
         Log.i("roomId", roomId);
+
+        final ProgressDialog progress = new ProgressDialog(this);
+        progress.setTitle(R.string.loading_title);
+        progress.setMessage(this.getString(R.string.loading_text));
+        progress.setCancelable(false);
+        progress.show();
 
         JsonObjectRequest jsonObjectReq = new JsonObjectRequest(Request.Method.GET,
                 SingletonAPI.BASE_URL + "rooms/" + roomId + "/devices",
@@ -265,38 +275,36 @@ public class Dispositives extends AppCompatActivity {
 
                             i++;
                         }
+
+                        progress.dismiss();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         VolleyLog.d("getRoomDevices", "Error: " + error.getMessage());
+
+                        progress.dismiss();
+
+                        AlertDialog.Builder builder;
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                            builder = new AlertDialog.Builder(dispositivesActivity, android.R.style.Theme_Material_Dialog_Alert);
+                        } else {
+                            builder = new AlertDialog.Builder(dispositivesActivity);
+                        }
+                        builder.setTitle(R.string.server_problem_title)
+                                .setMessage(R.string.server_problem_text)
+                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        onBackPressed();
+                                    }
+                                })
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .show();
                     }
                 });
 
         SingletonAPI.getInstance(getApplicationContext()).addToRequestQueue(jsonObjectReq, "getRoomDevices");
-
-        /*
-        FloatingActionButton add = findViewById(R.id.addD);
-        FloatingActionButton back = findViewById(R.id.backD);
-
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Dispositives.this, AddDispo.class);
-                startActivity(intent);
-            }
-        });
-
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Dispositives.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-        */
-
     }
 
     private Intent getIntent(String deviceTypeId) {

@@ -1,6 +1,11 @@
 package com.example.tomas.android_app.devices;
 
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.CompoundButton;
@@ -21,6 +26,8 @@ import org.json.JSONObject;
 
 public class Blinds extends AppCompatActivity {
 
+    private Context context = this;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.blind);
@@ -28,6 +35,12 @@ public class Blinds extends AppCompatActivity {
         final ToggleButton updown = findViewById(R.id.updown);
         updown.setOnCheckedChangeListener(null);
         final String deviceId = getIntent().getStringExtra("deviceId");
+
+        final ProgressDialog progress = new ProgressDialog(this);
+        progress.setTitle(R.string.loading_title);
+        progress.setMessage(this.getString(R.string.loading_text));
+        progress.setCancelable(false);
+        progress.show();
 
         final CompoundButton.OnCheckedChangeListener onCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -97,12 +110,31 @@ public class Blinds extends AppCompatActivity {
                         }
 
                         updown.setOnCheckedChangeListener(onCheckedChangeListener);
+                        progress.dismiss();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         VolleyLog.d("runActionInDevice", "Error: " + error.getMessage());
+
+                        progress.dismiss();
+
+                        AlertDialog.Builder builder;
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                            builder = new AlertDialog.Builder(context, android.R.style.Theme_Material_Dialog_Alert);
+                        } else {
+                            builder = new AlertDialog.Builder(context);
+                        }
+                        builder.setTitle(R.string.server_problem_title)
+                                .setMessage(R.string.server_problem_text)
+                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        onBackPressed();
+                                    }
+                                })
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .show();
                     }
                 });
 
