@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AutoHome</string>
+    <string name="title_home">Casa</string>
+    <string name="title_dashboard">Tablero</string>
+    <string name="title_notifications">Notificaciones</string>
+    <string name="title_activity_main">Actividad principal</string>
+    <string name="tab_text_1">FAVORITOS</string>
+    <string name="tab_text_2">HABITACIONES</string>
+    <string name="action_settings">Configuracion</string>
+    <string name="section_format">Hola mundo desde seccion: %1$d</string>
+    <string name="toolbar_sign_out">Probando toolbar</string>
+    <string name="action_notifications">Notificaciones</string>
+    <string name="action_routines">Rutinas</string>
+    <string name="panel_title">Panel 1</string>
+    <string name="testing">Probando rutinas</string>
+    <string name="testing2">Probando notificaciones</string>
+    <string name="here_addRoom">Escribe el nombre de la habitacion</string>
+    <string name="room_name">Nombre de la habitacion...</string>
+    <string name="name">Nombre</string>
+    <string name="type_the_dispositive_s_name">Escribe el nombre del dispositivo</string>
+    <string name="select_notifications">Seleccione las notificaciones que desea recibir</string>
+    <string name="turn_off_on_n">Encender/Apagar dispositivo</string>
+    <string name="routine_created">Rutina creada</string>
+    <string name="blind_down_up">Subir/Bajar cortina</string>
+    <string name="lamp_on_off">Encender/Apagar lampara</string>
+    <string name="create_execute_routine">Crea o ejecuta una rutina</string>
+    <string name="empty">Vacio</string>
+    <string name="device_not_implemented">Este dispositivo no es soportado aun</string>
+    <string name="down">Bajar</string>
+    <string name="up">Subir</string>
+    <string name="brightness">Brillo</string>
+    <string name="off">Apagar</string>
+    <string name="on">Encender</string>
+    <string name="checkbox">Casilla</string>
+    <string name="open">Abrir</string>
+    <string name="close">Cerrar</string>
+    <string name="unlock">Bloquear</string>
+    <string name="lock">Desbloquear</string>
+    <string name="closed">Cerrado</string>
+    <string name="locked">Bloqueado</string>
+    <string name="unlocked">Desbloqueado</string>
+    <string name="we_are_not_going_to_implement_this">No vamos a implementar esto</string>
+    <string name="stop">Parar</string>
+    <string name="start">Iniciar</string>
+    <string name="server_problem_title">El servidor no responde</string>
+    <string name="server_problem_text">No podemos conectarnos con el servidor, por favor prueba mas tarde</string>
+    <string name="loading_title">Cargando</string>
+    <string name="loading_text">Espere mientras carga…</string>
+
+
+</resources>
