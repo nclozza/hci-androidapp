@@ -12,7 +12,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +22,7 @@
         </activity>
         <activity
             android:name=".Routines"
-            android:label="AutoHome - Routines" >
+            android:label="AutoHome - Routines">
         </activity>
         <activity
             android:name=".RoomActivity"
@@ -29,19 +30,19 @@
         </activity>
         <activity
             android:name=".SelectRoomToDisplay"
-            android:label="AutoHome - Favorite Rooms" >
+            android:label="AutoHome - Favorite Rooms">
         </activity>
         <activity
             android:name=".Settings"
-            android:label="AutoHome - Settings" >
+            android:label="AutoHome - Settings">
         </activity>
         <activity
             android:name=".Notifications"
-            android:label="AutoHome - Notifications" >
+            android:label="AutoHome - Notifications">
         </activity>
         <activity
             android:name=".AddRoom"
-            android:label="AutoHome - Adding Rooms" >
+            android:label="AutoHome - Adding Rooms">
         </activity>
         <activity
             android:name=".AddDispo"
@@ -53,7 +54,7 @@
         </activity>
         <activity
             android:name=".Dispositives"
-            android:label="AutoHome - Dispositives" >
+            android:label="AutoHome - Dispositives">
         </activity>
         <activity
             android:name=".Door"
