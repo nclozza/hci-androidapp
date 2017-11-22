@@ -27,9 +27,8 @@ public class Tab2Room extends Fragment {
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.tab2room, container, false);
 
-        String BASE_URL = "http://10.0.2.2:8080/api/";
         JsonObjectRequest jsonObjectReq = new JsonObjectRequest(Request.Method.GET,
-                BASE_URL + "rooms",
+                SingletonAPI.BASE_URL + "rooms",
                 new JSONObject(),
                 new Response.Listener<JSONObject>() {
                     @Override

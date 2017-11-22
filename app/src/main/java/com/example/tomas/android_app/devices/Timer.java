@@ -1,6 +1,5 @@
 package com.example.tomas.android_app.devices;
 
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,20 +15,12 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.tomas.android_app.API.SingletonAPI;
 import com.example.tomas.android_app.R;
-import com.example.tomas.android_app.states.LampState;
 import com.example.tomas.android_app.states.TimerState;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
-
-/**
- * Created by Fede on 20/11/2017.
- */
 
 public class Timer extends AppCompatActivity {
 

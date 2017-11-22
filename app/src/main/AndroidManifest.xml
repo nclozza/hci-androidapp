@@ -65,8 +65,8 @@
             android:label="AutoHome - Lamp" >
         </activity>
         <activity
-            android:name=".devices.Timer"
-            android:label="AutoHome - Timer" >
+            android:name=".devices.NoDeviceYet"
+            android:label="AutoHome - No Device Yet" >
         </activity>
     </application>
 

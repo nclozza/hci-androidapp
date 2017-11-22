@@ -1,13 +1,7 @@
 package com.example.tomas.android_app;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.text.method.ScrollingMovementMethod;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
 
 public class SelectRoomToDisplay extends AppCompatActivity {
 

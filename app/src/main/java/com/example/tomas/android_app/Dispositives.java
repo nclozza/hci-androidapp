@@ -27,7 +27,6 @@ import org.json.JSONObject;
 
 public class Dispositives extends AppCompatActivity {
 
-
     Activity dispositivesActivity = this;
 
     protected void onCreate(Bundle savedInstanceState) {

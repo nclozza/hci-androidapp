@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -17,14 +16,14 @@ public class AddDispo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_dispo);
 
-        tv=(TextView)findViewById(R.id.editDisp);
+        tv= findViewById(R.id.editDisp);
 //        tv.setMovementMethod(new ScrollingMovementMethod());
 
-        FloatingActionButton done = (FloatingActionButton) findViewById(R.id.doneAD);
+        FloatingActionButton done = findViewById(R.id.doneAD);
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dispName=(EditText)findViewById(R.id.editDisp);
+                dispName= findViewById(R.id.editDisp);
                 tv.setText("Your input: \n" + dispName.getText().toString());
                 /* Uncomment this when correct adddispo called
                 Intent intent = new Intent(AddDispo.this, MainActivity.class);
@@ -33,7 +32,7 @@ public class AddDispo extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton back = (FloatingActionButton) findViewById(R.id.backAD);
+        FloatingActionButton back = findViewById(R.id.backAD);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

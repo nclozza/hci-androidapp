@@ -17,7 +17,7 @@ import org.json.JSONObject;
 
 public class RoomsAPI {
 
-    private static String BASE_URL = "http://10.0.2.2:8080/api/";
+    private static String BASE_URL = SingletonAPI.BASE_URL;
 
     /**
      * Retrieve all rooms

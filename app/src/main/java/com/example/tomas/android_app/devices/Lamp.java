@@ -21,7 +21,6 @@ import com.google.gson.GsonBuilder;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
 public class Lamp extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
