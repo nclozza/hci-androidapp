@@ -20,12 +20,12 @@ import com.google.gson.GsonBuilder;
 
 import org.json.JSONObject;
 
-public class Tab2Room extends Fragment {
+public class Tab1Room extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        final View rootView = inflater.inflate(R.layout.tab2room, container, false);
+        final View rootView = inflater.inflate(R.layout.tab1room, container, false);
 
         JsonObjectRequest jsonObjectReq = new JsonObjectRequest(Request.Method.GET,
                 SingletonAPI.BASE_URL + "rooms",

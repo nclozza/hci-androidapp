@@ -68,19 +68,18 @@ public class MainActivity extends AppCompatActivity {
                 //Where 0 is FAVORITOS and 1 is HABITACIONES
 
                 if (currentTab == 0) {
-                    lastI = 1;
+                    lastI = 0;
                     Intent intent = new Intent(MainActivity.this, AddRoom.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 } else if (currentTab == 1){
+                    lastI = 1;
                     Intent intent = new Intent(MainActivity.this, Routines.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
             }
         });
-
-        //RoomsAPI.getAllRooms(this);
     }
 
     @Override
@@ -139,10 +138,10 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    Tab1Fav tab1 = new Tab1Fav();
+                    Tab1Room tab1 = new Tab1Room();
                     return tab1;
                 case 1:
-                    Tab2Room tab2 = new Tab2Room();
+                    Tab2Routines tab2 = new Tab2Routines();
                     return tab2;
                 default:
                     return null;
