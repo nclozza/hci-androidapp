@@ -40,7 +40,7 @@
     <string name="closed">Cerrada</string>
     <string name="locked">Trabada</string>
     <string name="unlocked">Destrabada</string>
-    <string name="we_are_not_going_to_implement_this">No vamos a implementar esto</string>
+    <string name="we_are_not_going_to_implement_this">Todavía no se encuentra implementado</string>
     <string name="stop">Parar</string>
     <string name="start">Iniciar</string>
     <string name="server_problem_title">El servidor no responde</string>
