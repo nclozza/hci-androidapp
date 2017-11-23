@@ -95,16 +95,19 @@ public class MainActivity extends AppCompatActivity {
 
         String doorNotifications = getSharedPreferences.getString("doorNotifications", null);
         String lampNotifications = getSharedPreferences.getString("lampNotifications", null);
-        String blindsNotification = getSharedPreferences.getString("blindsNotifications", null);
+        String blindsNotifications = getSharedPreferences.getString("blindsNotifications", null);
         String timerNotifications = getSharedPreferences.getString("timerNotifications", null);
+        String routinesNotifications = getSharedPreferences.getString("routinesNotifications", null);
 
         if (doorNotifications == null && lampNotifications == null
-                && blindsNotification == null && timerNotifications == null) {
+                && blindsNotifications == null && timerNotifications == null
+                    && routinesNotifications == null) {
             editor = getSharedPreferences.edit();
             editor.putString("doorNotifications", "true");
             editor.putString("lampNotifications", "true");
             editor.putString("blindsNotifications", "true");
             editor.putString("timerNotifications", "true");
+            editor.putString("routinesNotifications", "true");
             editor.apply();
         }
 

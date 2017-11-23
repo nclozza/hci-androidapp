@@ -65,5 +65,6 @@
     <string name="lamp_notification">Notificaciones de lámparas</string>
     <string name="blinds_notification">Notificaciones de persianas</string>
     <string name="timer_notification">Notificaciones de temporizadores</string>
+    <string name="routines_notification">Notificaciones de rutinas</string>
 
 </resources>

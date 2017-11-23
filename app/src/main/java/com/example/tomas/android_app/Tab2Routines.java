@@ -3,6 +3,7 @@ package com.example.tomas.android_app;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -242,6 +243,9 @@ public class Tab2Routines extends Fragment {
 
     public static void executeRoutine(final Activity activity, final RoutinesState.Routine routine, final ProgressDialog progressDialog) {
 
+        final SharedPreferences mSettings = activity.getSharedPreferences("notifications", 0);
+        final String routinesNotifications = mSettings.getString("routinesNotifications", null);
+
         JsonObjectRequest jsonObjectReq = new JsonObjectRequest(Request.Method.PUT,
                 SingletonAPI.BASE_URL + "routines/" + routine.getId() + "/execute",
                 new JSONObject(),
@@ -249,8 +253,10 @@ public class Tab2Routines extends Fragment {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.d("executeRoutine", response.toString());
+                        if (routinesNotifications.equals("true")) {
+                            MainActivity.sendNotification(activity.getString(R.string.routine_executed), routine.getName());
+                        }
                         progressDialog.dismiss();
-                        MainActivity.sendNotification(activity.getString(R.string.routine_executed), routine.getName());
                     }
                 },
                 new Response.ErrorListener() {

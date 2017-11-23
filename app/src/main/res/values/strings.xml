@@ -65,5 +65,6 @@
     <string name="lamp_notification">Lamps notifications</string>
     <string name="blinds_notification">Blinds notifications</string>
     <string name="timer_notification">Timers notifications</string>
+    <string name="routines_notification">Routines notifications</string>
 
 </resources>

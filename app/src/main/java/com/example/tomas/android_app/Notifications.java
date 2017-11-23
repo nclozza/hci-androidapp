@@ -17,17 +17,20 @@ public class Notifications extends AppCompatActivity {
         final CheckBox ch2 = findViewById(R.id.checkBox2);
         final CheckBox ch3 = findViewById(R.id.checkBox3);
         final CheckBox ch4 = findViewById(R.id.checkBox4);
+        final CheckBox ch5 = findViewById(R.id.checkBox5);
 
         final SharedPreferences mSettings = getApplication().getSharedPreferences("notifications", 0);
         String blindsNotification = mSettings.getString("blindsNotifications", null);
         String doorNotification = mSettings.getString("doorNotifications", null);
         String lampNotification = mSettings.getString("lampNotifications", null);
         String timerNotification = mSettings.getString("timerNotifications", null);
+        String routinesNotifications = mSettings.getString("routinesNotifications", null);
 
         ch.setChecked(doorNotification.equals("true"));
         ch2.setChecked(lampNotification.equals("true"));
         ch3.setChecked(blindsNotification.equals("true"));
         ch4.setChecked(timerNotification.equals("true"));
+        ch5.setChecked(routinesNotifications.equals("true"));
 
         final SharedPreferences.Editor editor = mSettings.edit();
 
@@ -78,6 +81,19 @@ public class Notifications extends AppCompatActivity {
 
                 } else {
                     editor.putString("timerNotifications", "false");
+                    editor.apply();
+                }
+            }
+        });
+
+        ch5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (ch5.isChecked()) {
+                    editor.putString("routinesNotifications", "true");
+                    editor.apply();
+
+                } else {
+                    editor.putString("routinesNotifications", "false");
                     editor.apply();
                 }
             }

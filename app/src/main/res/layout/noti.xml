@@ -60,6 +60,14 @@
             android:layout_marginTop="15dp"
             android:text="@string/timer_notification" />
 
+        <CheckBox
+            android:id="@+id/checkBox5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/routines_notification" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
