@@ -17,6 +17,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.tomas.android_app.API.SingletonAPI;
+import com.example.tomas.android_app.MainActivity;
 import com.example.tomas.android_app.R;
 import com.example.tomas.android_app.states.DoorState;
 import com.google.gson.Gson;
@@ -38,6 +39,7 @@ public class Door extends AppCompatActivity {
         openclose.setOnCheckedChangeListener(null);
         lock.setOnCheckedChangeListener(null);
         final String deviceId = getIntent().getStringExtra("deviceId");
+        final String deviceName = getIntent().getStringExtra("deviceName");
 
         final ProgressDialog progress = new ProgressDialog(this);
         progress.setTitle(R.string.loading_title);
@@ -56,6 +58,8 @@ public class Door extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
+                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                            context.getString(R.string.door_closed) + ", " + deviceName);
                                 }
                             },
                             new Response.ErrorListener() {
@@ -75,6 +79,8 @@ public class Door extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
+                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                            context.getString(R.string.door_opened) + ", " + deviceName);
                                 }
                             },
                             new Response.ErrorListener() {
@@ -100,6 +106,8 @@ public class Door extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
+                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                            context.getString(R.string.door_locked) + ", " + deviceName);
                                 }
                             },
                             new Response.ErrorListener() {
@@ -119,6 +127,8 @@ public class Door extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
+                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                            context.getString(R.string.door_unlocked) + ", " + deviceName);
                                 }
                             },
                             new Response.ErrorListener() {

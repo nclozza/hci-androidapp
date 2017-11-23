@@ -33,10 +33,10 @@
     <string name="off">Off</string>
     <string name="on">On</string>
     <string name="checkbox">CheckBox</string>
-    <string name="open">Open</string>
-    <string name="close">Close</string>
-    <string name="unlock">Unlock</string>
-    <string name="lock">Lock</string>
+    <string name="open">Opened</string>
+    <string name="close">Closed</string>
+    <string name="unlock">Unlocked</string>
+    <string name="lock">Locked</string>
     <string name="closed">Closed</string>
     <string name="locked">Locked</string>
     <string name="unlocked">Unlocked</string>
@@ -47,6 +47,19 @@
     <string name="server_problem_text">We can\'t connect to the server, please try again later</string>
     <string name="loading_title">Loading</string>
     <string name="loading_text">Wait while loading…</string>
-
+    <string name="routine_executed">Routine executed</string>
+    <string name="action_executed">Action executed</string>
+    <string name="blinds_down">Blinds down</string>
+    <string name="blinds_up">Blinds up</string>
+    <string name="door_closed">Door closed</string>
+    <string name="door_opened">Door opened</string>
+    <string name="door_locked">Door locked</string>
+    <string name="door_unlocked">Door unlocked</string>
+    <string name="lamp_off">Lamp off</string>
+    <string name="lamp_on">Lamp on</string>
+    <string name="lamp_brightness">Brightness modified</string>
+    <string name="timer_start">Timer started</string>
+    <string name="timer_stop">Timer stopped</string>
+    <string name="timer_changed_interval">Timer interval changed</string>
 
 </resources>

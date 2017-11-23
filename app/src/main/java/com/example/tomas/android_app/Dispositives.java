@@ -71,6 +71,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -84,6 +85,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -97,6 +99,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -110,6 +113,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -123,6 +127,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -136,6 +141,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -149,6 +155,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -162,6 +169,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -175,6 +183,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -188,6 +197,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -201,6 +211,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -214,6 +225,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -227,6 +239,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -240,6 +253,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -253,6 +267,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });
@@ -266,6 +281,7 @@ public class Dispositives extends AppCompatActivity {
                                         public void onClick(View v) {
                                             Intent intent = getIntent(eachDevice.getTypeId());
                                             intent.putExtra("deviceId", eachDevice.getId());
+                                            intent.putExtra("deviceName", eachDevice.getName());
                                             startActivity(intent);
                                         }
                                     });

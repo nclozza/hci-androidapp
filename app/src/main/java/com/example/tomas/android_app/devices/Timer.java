@@ -18,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.tomas.android_app.API.SingletonAPI;
+import com.example.tomas.android_app.MainActivity;
 import com.example.tomas.android_app.R;
 import com.example.tomas.android_app.states.TimerState;
 import com.google.gson.Gson;
@@ -47,6 +48,7 @@ public class Timer extends AppCompatActivity {
          progress.show();
 
         final String deviceId = getIntent().getStringExtra("deviceId");
+         final String deviceName = getIntent().getStringExtra("deviceName");
 
         final CompoundButton.OnCheckedChangeListener checkedChangeListener = new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -58,6 +60,8 @@ public class Timer extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
+                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                            context.getString(R.string.timer_start) + ", " + deviceName);
                                 }
                             },
                             new Response.ErrorListener() {
@@ -77,6 +81,8 @@ public class Timer extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
+                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                            context.getString(R.string.timer_stop) + ", " + deviceName);
                                 }
                             },
                             new Response.ErrorListener() {
@@ -110,6 +116,8 @@ public class Timer extends AppCompatActivity {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Log.i("runActionInDevice", response.toString());
+                                MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                        context.getString(R.string.timer_changed_interval) + ", " + deviceName);
                             }
                         },
                         new Response.ErrorListener() {

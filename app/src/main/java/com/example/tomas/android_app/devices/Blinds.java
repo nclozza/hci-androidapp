@@ -17,6 +17,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.tomas.android_app.API.SingletonAPI;
+import com.example.tomas.android_app.MainActivity;
 import com.example.tomas.android_app.R;
 import com.example.tomas.android_app.states.BlindsState;
 import com.google.gson.Gson;
@@ -35,6 +36,7 @@ public class Blinds extends AppCompatActivity {
         final ToggleButton updown = findViewById(R.id.updown);
         updown.setOnCheckedChangeListener(null);
         final String deviceId = getIntent().getStringExtra("deviceId");
+        final String deviceName = getIntent().getStringExtra("deviceName");
 
         final ProgressDialog progress = new ProgressDialog(this);
         progress.setTitle(R.string.loading_title);
@@ -53,6 +55,8 @@ public class Blinds extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
+                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                            context.getString(R.string.blinds_down) + ", " + deviceName);
                                 }
                             },
                             new Response.ErrorListener() {
@@ -73,6 +77,8 @@ public class Blinds extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
+                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                            context.getString(R.string.blinds_up) + ", " + deviceName);
                                 }
                             },
                             new Response.ErrorListener() {

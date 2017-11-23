@@ -61,7 +61,7 @@ public class Tab2Routines extends Fragment {
                                     button1.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button1.setVisibility(View.VISIBLE);
@@ -73,12 +73,11 @@ public class Tab2Routines extends Fragment {
                                     button2.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button2.setVisibility(View.VISIBLE);
                                     break;
-
 
                                 case 3:
                                     Button button3 = getActivity().findViewById(R.id.buttonR3);
@@ -86,12 +85,11 @@ public class Tab2Routines extends Fragment {
                                     button3.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button3.setVisibility(View.VISIBLE);
                                     break;
-
 
                                 case 4:
                                     Button button4 = getActivity().findViewById(R.id.buttonR4);
@@ -99,7 +97,7 @@ public class Tab2Routines extends Fragment {
                                     button4.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button4.setVisibility(View.VISIBLE);
@@ -111,7 +109,7 @@ public class Tab2Routines extends Fragment {
                                     button5.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button5.setVisibility(View.VISIBLE);
@@ -123,7 +121,7 @@ public class Tab2Routines extends Fragment {
                                     button6.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button6.setVisibility(View.VISIBLE);
@@ -135,7 +133,7 @@ public class Tab2Routines extends Fragment {
                                     button7.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button7.setVisibility(View.VISIBLE);
@@ -147,7 +145,7 @@ public class Tab2Routines extends Fragment {
                                     button8.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button8.setVisibility(View.VISIBLE);
@@ -159,7 +157,7 @@ public class Tab2Routines extends Fragment {
                                     button9.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button9.setVisibility(View.VISIBLE);
@@ -171,7 +169,7 @@ public class Tab2Routines extends Fragment {
                                     button10.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button10.setVisibility(View.VISIBLE);
@@ -183,7 +181,7 @@ public class Tab2Routines extends Fragment {
                                     button11.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button11.setVisibility(View.VISIBLE);
@@ -195,7 +193,7 @@ public class Tab2Routines extends Fragment {
                                     button12.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button12.setVisibility(View.VISIBLE);
@@ -207,7 +205,7 @@ public class Tab2Routines extends Fragment {
                                     button13.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button13.setVisibility(View.VISIBLE);
@@ -219,7 +217,7 @@ public class Tab2Routines extends Fragment {
                                     button14.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
                                             progress.show();
-                                            executeRoutine(getActivity(), eachRoutine.getId(), progress);
+                                            executeRoutine(getActivity(), eachRoutine, progress);
                                         }
                                     });
                                     button14.setVisibility(View.VISIBLE);
@@ -242,16 +240,17 @@ public class Tab2Routines extends Fragment {
         return rootView;
     }
 
-    public static void executeRoutine(final Activity activity, String routineId, final ProgressDialog progressDialog) {
+    public static void executeRoutine(final Activity activity, final RoutinesState.Routine routine, final ProgressDialog progressDialog) {
 
         JsonObjectRequest jsonObjectReq = new JsonObjectRequest(Request.Method.PUT,
-                SingletonAPI.BASE_URL + "routines/" + routineId + "/execute",
+                SingletonAPI.BASE_URL + "routines/" + routine.getId() + "/execute",
                 new JSONObject(),
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.d("executeRoutine", response.toString());
                         progressDialog.dismiss();
+                        MainActivity.sendNotification(activity.getString(R.string.routine_executed), routine.getName());
                     }
                 },
                 new Response.ErrorListener() {

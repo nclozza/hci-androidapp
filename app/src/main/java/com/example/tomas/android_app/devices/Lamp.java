@@ -18,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.tomas.android_app.API.SingletonAPI;
+import com.example.tomas.android_app.MainActivity;
 import com.example.tomas.android_app.R;
 import com.example.tomas.android_app.states.LampState;
 import com.google.gson.Gson;
@@ -38,6 +39,7 @@ public class Lamp extends AppCompatActivity {
         final SeekBar brightness = findViewById(R.id.brightness);
         onoff.setOnCheckedChangeListener(null);
         final String deviceId = getIntent().getStringExtra("deviceId");
+        final String deviceName = getIntent().getStringExtra("deviceName");
 
         final ProgressDialog progress = new ProgressDialog(this);
         progress.setTitle(R.string.loading_title);
@@ -55,6 +57,8 @@ public class Lamp extends AppCompatActivity {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Log.d("runActionInDevice", response.toString());
+                                MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                        context.getString(R.string.lamp_on) + ", " + deviceName);
                             }
                         },
                         new Response.ErrorListener() {
@@ -74,6 +78,8 @@ public class Lamp extends AppCompatActivity {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Log.d("runActionInDevice", response.toString());
+                                MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                        context.getString(R.string.lamp_off) + ", " + deviceName);
                             }
                         },
                         new Response.ErrorListener() {
@@ -106,6 +112,8 @@ public class Lamp extends AppCompatActivity {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Log.i("runActionInDevice", response.toString());
+                                MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                        context.getString(R.string.lamp_brightness) + ", " + deviceName);
                             }
                         },
                         new Response.ErrorListener() {
