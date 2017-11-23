@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
-            android:text="@string/checkbox" />
+            android:text="@string/door_notification" />
 
         <CheckBox
             android:id="@+id/checkBox2"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
-            android:text="@string/checkbox" />
+            android:text="@string/lamp_notification" />
 
         <CheckBox
             android:id="@+id/checkBox3"
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
-            android:text="@string/checkbox" />
+            android:text="@string/blinds_notification" />
 
         <CheckBox
             android:id="@+id/checkBox4"
@@ -58,15 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
-            android:text="@string/checkbox" />
-
-        <CheckBox
-            android:id="@+id/checkBox5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/checkbox" />
+            android:text="@string/timer_notification" />
 
     </LinearLayout>
 

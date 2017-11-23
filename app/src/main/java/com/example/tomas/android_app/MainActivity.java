@@ -1,8 +1,10 @@
 package com.example.tomas.android_app;
 
+import android.annotation.SuppressLint;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.NotificationCompat;
@@ -21,7 +23,10 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    @SuppressLint("StaticFieldLeak")
     private static Context context;
+    SharedPreferences getSharedPreferences;
+    SharedPreferences.Editor editor;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -85,6 +90,24 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        getSharedPreferences = getSharedPreferences("notifications", 0);
+
+        String doorNotifications = getSharedPreferences.getString("doorNotifications", null);
+        String lampNotifications = getSharedPreferences.getString("lampNotifications", null);
+        String blindsNotification = getSharedPreferences.getString("blindsNotifications", null);
+        String timerNotifications = getSharedPreferences.getString("timerNotifications", null);
+
+        if (doorNotifications == null && lampNotifications == null
+                && blindsNotification == null && timerNotifications == null) {
+            editor = getSharedPreferences.edit();
+            editor.putString("doorNotifications", "true");
+            editor.putString("lampNotifications", "true");
+            editor.putString("blindsNotifications", "true");
+            editor.putString("timerNotifications", "true");
+            editor.apply();
+        }
+
     }
 
     @Override

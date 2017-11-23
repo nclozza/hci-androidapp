@@ -61,5 +61,9 @@
     <string name="timer_start">Timer started</string>
     <string name="timer_stop">Timer stopped</string>
     <string name="timer_changed_interval">Timer interval changed</string>
+    <string name="door_notification">Doors notifications</string>
+    <string name="lamp_notification">Lamps notifications</string>
+    <string name="blinds_notification">Blinds notifications</string>
+    <string name="timer_notification">Timers notifications</string>
 
 </resources>

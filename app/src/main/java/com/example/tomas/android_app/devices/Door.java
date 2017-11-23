@@ -3,6 +3,7 @@ package com.example.tomas.android_app.devices;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -41,6 +42,9 @@ public class Door extends AppCompatActivity {
         final String deviceId = getIntent().getStringExtra("deviceId");
         final String deviceName = getIntent().getStringExtra("deviceName");
 
+        final SharedPreferences mSettings = getApplication().getSharedPreferences("notifications", 0);
+        final String doorNotification = mSettings.getString("doorNotifications", null);
+
         final ProgressDialog progress = new ProgressDialog(this);
         progress.setTitle(R.string.loading_title);
         progress.setMessage(this.getString(R.string.loading_text));
@@ -58,8 +62,10 @@ public class Door extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
-                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
-                                            context.getString(R.string.door_closed) + ", " + deviceName);
+                                    if (doorNotification.equals("true")) {
+                                        MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                                context.getString(R.string.door_closed) + ", " + deviceName);
+                                    }
                                 }
                             },
                             new Response.ErrorListener() {
@@ -79,8 +85,10 @@ public class Door extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
-                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
-                                            context.getString(R.string.door_opened) + ", " + deviceName);
+                                    if (doorNotification.equals("true")) {
+                                        MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                                context.getString(R.string.door_opened) + ", " + deviceName);
+                                    }
                                 }
                             },
                             new Response.ErrorListener() {
@@ -106,8 +114,10 @@ public class Door extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
-                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
-                                            context.getString(R.string.door_locked) + ", " + deviceName);
+                                    if (doorNotification.equals("true")) {
+                                        MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                                context.getString(R.string.door_locked) + ", " + deviceName);
+                                    }
                                 }
                             },
                             new Response.ErrorListener() {
@@ -127,8 +137,10 @@ public class Door extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
-                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
-                                            context.getString(R.string.door_unlocked) + ", " + deviceName);
+                                    if (doorNotification.equals("true")) {
+                                        MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                                context.getString(R.string.door_unlocked) + ", " + deviceName);
+                                    }
                                 }
                             },
                             new Response.ErrorListener() {

@@ -3,6 +3,7 @@ package com.example.tomas.android_app.devices;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -41,6 +42,9 @@ public class Timer extends AppCompatActivity {
         timePicker.setOnTimeChangedListener(null);
         timePicker.setIs24HourView(true);
 
+         final SharedPreferences mSettings = getApplication().getSharedPreferences("notifications", 0);
+         final String timerNotification = mSettings.getString("timerNotifications", null);
+
          final ProgressDialog progress = new ProgressDialog(this);
          progress.setTitle(R.string.loading_title);
          progress.setMessage(this.getString(R.string.loading_text));
@@ -60,8 +64,10 @@ public class Timer extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
-                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
-                                            context.getString(R.string.timer_start) + ", " + deviceName);
+                                    if (timerNotification.equals("true")) {
+                                        MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                                context.getString(R.string.timer_start) + ", " + deviceName);
+                                    }
                                 }
                             },
                             new Response.ErrorListener() {
@@ -81,8 +87,10 @@ public class Timer extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     Log.d("runActionInDevice", response.toString());
-                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
-                                            context.getString(R.string.timer_stop) + ", " + deviceName);
+                                    if (timerNotification.equals("true")) {
+                                        MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                                context.getString(R.string.timer_stop) + ", " + deviceName);
+                                    }
                                 }
                             },
                             new Response.ErrorListener() {
@@ -116,8 +124,10 @@ public class Timer extends AppCompatActivity {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Log.i("runActionInDevice", response.toString());
-                                MainActivity.sendNotification(context.getString(R.string.action_executed),
-                                        context.getString(R.string.timer_changed_interval) + ", " + deviceName);
+                                if (timerNotification.equals("true")) {
+                                    MainActivity.sendNotification(context.getString(R.string.action_executed),
+                                            context.getString(R.string.timer_changed_interval) + ", " + deviceName);
+                                }
                             }
                         },
                         new Response.ErrorListener() {

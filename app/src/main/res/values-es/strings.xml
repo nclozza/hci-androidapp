@@ -61,5 +61,9 @@
     <string name="timer_start">Temporizador iniciado</string>
     <string name="timer_stop">Temporizador detenido</string>
     <string name="timer_changed_interval">Intervalo del temporizador modificado</string>
+    <string name="door_notification">Notificaciones de puertas</string>
+    <string name="lamp_notification">Notificaciones de lámparas</string>
+    <string name="blinds_notification">Notificaciones de persianas</string>
+    <string name="timer_notification">Notificaciones de temporizadores</string>
 
 </resources>

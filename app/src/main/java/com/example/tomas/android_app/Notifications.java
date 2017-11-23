@@ -1,5 +1,6 @@
 package com.example.tomas.android_app;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.support.v7.app.AppCompatActivity;
@@ -13,53 +14,72 @@ public class Notifications extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.noti);
         final CheckBox ch = findViewById(R.id.checkBox);
-        final CheckBox ch2= findViewById(R.id.checkBox2);
+        final CheckBox ch2 = findViewById(R.id.checkBox2);
         final CheckBox ch3 = findViewById(R.id.checkBox3);
         final CheckBox ch4 = findViewById(R.id.checkBox4);
-        final CheckBox ch5 = findViewById(R.id.checkBox5);
+
+        final SharedPreferences mSettings = getApplication().getSharedPreferences("notifications", 0);
+        String blindsNotification = mSettings.getString("blindsNotifications", null);
+        String doorNotification = mSettings.getString("doorNotifications", null);
+        String lampNotification = mSettings.getString("lampNotifications", null);
+        String timerNotification = mSettings.getString("timerNotifications", null);
+
+        ch.setChecked(doorNotification.equals("true"));
+        ch2.setChecked(lampNotification.equals("true"));
+        ch3.setChecked(blindsNotification.equals("true"));
+        ch4.setChecked(timerNotification.equals("true"));
+
+        final SharedPreferences.Editor editor = mSettings.edit();
 
         ch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (ch.isChecked())
-                    Log.i("LA PRIMERA", "OK");
-                else
-                    Log.i("LA PRIMERA", "NO OK");
+                if (ch.isChecked()) {
+                    editor.putString("doorNotifications", "true");
+                    editor.apply();
+
+                } else {
+                    editor.putString("doorNotifications", "false");
+                    editor.apply();
+                }
             }
         });
 
         ch2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (ch.isChecked())
-                    Log.i("LA SEGUNDA", "OK");
-                else
-                    Log.i("LA SEGUNDA", "NO OK");
+                if (ch2.isChecked()) {
+                    editor.putString("lampNotifications", "true");
+                    editor.apply();
+
+                } else {
+                    editor.putString("lampNotifications", "false");
+                    editor.apply();
+                }
             }
         });
 
         ch3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (ch.isChecked())
-                    Log.i("LA TERCERA", "OK");
-                else
-                    Log.i("LA TERCERA", "NO OK");
+                if (ch3.isChecked()) {
+                    editor.putString("blindsNotifications", "true");
+                    editor.apply();
+
+                } else {
+                    editor.putString("blindsNotifications", "false");
+                    editor.apply();
+                }
             }
         });
 
         ch4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (ch.isChecked())
-                    Log.i("LA CUARTA", "OK");
-                else
-                    Log.i("LA CUARTA", "NO OK");
-            }
-        });
+                if (ch4.isChecked()) {
+                    editor.putString("timerNotifications", "true");
+                    editor.apply();
 
-        ch5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (ch.isChecked())
-                    Log.i("LA QUINTA", "OK");
-                else
-                    Log.i("LA QUINTA", "NO OK");
+                } else {
+                    editor.putString("timerNotifications", "false");
+                    editor.apply();
+                }
             }
         });
 
