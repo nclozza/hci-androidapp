@@ -5,8 +5,8 @@
     <string name="title_dashboard">Tablero</string>
     <string name="title_notifications">Notificaciones</string>
     <string name="title_activity_main">Actividad principal</string>
-    <string name="tab_text_1">FAVORITOS</string>
-    <string name="tab_text_2">HABITACIONES</string>
+    <string name="tab_text_1">HABITACIONES</string>
+    <string name="tab_text_2">RUTINAS</string>
     <string name="action_settings">Configuracion</string>
     <string name="section_format">Hola mundo desde seccion: %1$d</string>
     <string name="toolbar_sign_out">Probando toolbar</string>

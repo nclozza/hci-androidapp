@@ -12,10 +12,5 @@
         android:orderInCategory="100"
         android:title="@string/action_notifications"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/action_routines"
-        android:orderInCategory="100"
-        android:title="@string/action_routines"
-        app:showAsAction="never" />
 
 </menu>

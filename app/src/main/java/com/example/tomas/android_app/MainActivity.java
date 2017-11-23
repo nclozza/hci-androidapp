@@ -67,13 +67,13 @@ public class MainActivity extends AppCompatActivity {
                 int currentTab = tabLayout.getSelectedTabPosition();
                 //Where 0 is FAVORITOS and 1 is HABITACIONES
 
-                if (currentTab == 1) {
+                if (currentTab == 0) {
                     lastI = 1;
                     Intent intent = new Intent(MainActivity.this, AddRoom.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
-                } else if (currentTab == 0){
-                    Intent intent = new Intent(MainActivity.this, SelectRoomToDisplay.class);
+                } else if (currentTab == 1){
+                    Intent intent = new Intent(MainActivity.this, Routines.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
@@ -115,10 +115,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Settings.class);
                 startActivity(intent);
                 //do stuff
-                return true;
-            case R.id.action_routines:
-                Intent intent2 = new Intent(MainActivity.this, Routines.class);
-                startActivity(intent2);
                 return true;
             case R.id.action_notification:
                 Intent intent3 = new Intent(MainActivity.this, Notifications.class);

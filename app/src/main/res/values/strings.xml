@@ -5,8 +5,8 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="tab_text_1">FAVORITES</string>
-    <string name="tab_text_2">ROOMS</string>
+    <string name="tab_text_1">ROOMS</string>
+    <string name="tab_text_2">ROUTINES</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="toolbar_sign_out">Testing toolbar</string>
