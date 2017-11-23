@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Routines"
+            android:name=".AddRoutine"
             android:label="AutoHome - Routines">
         </activity>
         <activity

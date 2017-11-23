@@ -8,7 +8,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.example.tomas.android_app.Rooms;
+import com.example.tomas.android_app.states.RoomsState;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -36,10 +36,10 @@ public class RoomsAPI {
                     GsonBuilder gsonBuilder = new GsonBuilder();
                     gson = gsonBuilder.create();
 
-                    Rooms rooms = gson.fromJson(response.toString(), Rooms.class);
+                    RoomsState roomsState = gson.fromJson(response.toString(), RoomsState.class);
 
-                    Log.i("Rooms", rooms.toString());
-                    for (Rooms.Room eachRoom : rooms.getRooms()) {
+                    Log.i("RoomsState", roomsState.toString());
+                    for (RoomsState.Room eachRoom : roomsState.getRooms()) {
                         Log.i("Room", eachRoom.getName());
                     }
 

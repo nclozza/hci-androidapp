@@ -1,17 +1,17 @@
-package com.example.tomas.android_app;
+package com.example.tomas.android_app.states;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class Rooms {
+public class RoomsState {
 
-    List<Room> rooms;
+    private List<Room> rooms;
 
-    public Rooms() {
+    public RoomsState() {
         this.rooms = new LinkedList<>();
     }
 
-    public Rooms(List<Room> rooms) {
+    public RoomsState(List<Room> rooms) {
         this.rooms = rooms;
     }
 

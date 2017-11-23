@@ -15,6 +15,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.tomas.android_app.API.SingletonAPI;
+import com.example.tomas.android_app.states.RoomsState;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -39,11 +40,11 @@ public class Tab1Room extends Fragment {
                         GsonBuilder gsonBuilder = new GsonBuilder();
                         gson = gsonBuilder.create();
 
-                        Rooms rooms = gson.fromJson(response.toString(), Rooms.class);
+                        RoomsState roomsState = gson.fromJson(response.toString(), RoomsState.class);
 
-                        Log.i("Rooms", rooms.toString());
+                        Log.i("RoomsState", roomsState.toString());
                         int i = 1;
-                        for (final Rooms.Room eachRoom : rooms.getRooms()) {
+                        for (final RoomsState.Room eachRoom : roomsState.getRooms()) {
                             switch (i) {
                                 case 1:
                                     Button button1 = rootView.findViewById(R.id.button1);
@@ -245,5 +246,4 @@ public class Tab1Room extends Fragment {
 
         return rootView;
     }
-
 }

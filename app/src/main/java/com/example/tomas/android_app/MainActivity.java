@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 } else if (currentTab == 1){
                     lastI = 1;
-                    Intent intent = new Intent(MainActivity.this, Routines.class);
+                    Intent intent = new Intent(MainActivity.this, AddRoutine.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }

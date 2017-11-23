@@ -18,7 +18,7 @@ import com.google.gson.GsonBuilder;
 
 import org.json.JSONObject;
 
-public class Routines extends AppCompatActivity{
+public class AddRoutine extends AppCompatActivity{
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
