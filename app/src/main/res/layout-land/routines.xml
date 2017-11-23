@@ -1,198 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/constraintLayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:id="@+id/pan1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.tomas.android_app.MainActivity$PlaceholderFragment">
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/border"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:visibility="invisible">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="110dp"
-        app:layout_constraintStart_toStartOf="parent">
 
-        <GridLayout
-            android:id="@+id/gridLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    <TextView
+        android:id="@+id/groupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:paddingStart="5dp"
+        android:text="@string/panel_title" />
 
-            <Button
-                android:id="@+id/buttonR1"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="0"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
+</LinearLayout>
 
-            <Button
-                android:id="@+id/buttonR2"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="0"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/buttonR3"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="1"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/buttonR4"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="1"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/buttonR5"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="2"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/buttonR6"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="2"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/buttonR7"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="3"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/buttonR8"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="3"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/buttonR9"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="4"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/buttonR10"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="4"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/buttonR11"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="5"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/buttonR12"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="5"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/buttonR13"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="6"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
-
-            <Button
-                android:id="@+id/buttonR14"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_marginBottom="20dp"
-                android:layout_marginEnd="50dp"
-                android:layout_row="6"
-                android:backgroundTint="@color/colorButton"
-                android:text="@string/empty"
-                android:visibility="invisible" />
-
-        </GridLayout>
-
-    </ScrollView>
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/we_are_not_going_to_implement_this"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
