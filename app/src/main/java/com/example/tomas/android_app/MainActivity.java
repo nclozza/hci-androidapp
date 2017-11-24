@@ -28,20 +28,6 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences getSharedPreferences;
     SharedPreferences.Editor editor;
 
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
-    private SectionsPagerAdapter mSectionsPagerAdapter;
-
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
-    private ViewPager mViewPager;
     private static int lastI = 0;
 
     @Override
@@ -52,14 +38,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-
-        // Create the adapter that will return a fragment for each of the two
-        // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
-        // Set up the ViewPager with the sections adapter.
-        mViewPager = findViewById(R.id.container);
+        ViewPager mViewPager = findViewById(R.id.container);
 
         mViewPager.setAdapter(mSectionsPagerAdapter);
                 final TabLayout tabLayout = findViewById(R.id.tabs);
@@ -75,14 +56,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int currentTab = tabLayout.getSelectedTabPosition();
-                //Where 0 is FAVORITOS and 1 is HABITACIONES
-
                 if (currentTab == 0) {
                     lastI = 0;
                     Intent intent = new Intent(MainActivity.this, AddRoom.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
-                } else if (currentTab == 1){
+
+                } else if (currentTab == 1) {
                     lastI = 1;
                     Intent intent = new Intent(MainActivity.this, AddRoutine.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -99,9 +79,9 @@ public class MainActivity extends AppCompatActivity {
         String timerNotifications = getSharedPreferences.getString("timerNotifications", null);
         String routinesNotifications = getSharedPreferences.getString("routinesNotifications", null);
 
-        if (doorNotifications == null && lampNotifications == null
-                && blindsNotifications == null && timerNotifications == null
-                    && routinesNotifications == null) {
+        if (doorNotifications == null || lampNotifications == null
+                || blindsNotifications == null || timerNotifications == null
+                    || routinesNotifications == null) {
             editor = getSharedPreferences.edit();
             editor.putString("doorNotifications", "true");
             editor.putString("lampNotifications", "true");
@@ -120,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         context = this;
         return true;
@@ -128,25 +107,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-
         int id = item.getItemId();
         switch (id) {
             case R.id.action_settings:
                 Intent intent = new Intent(MainActivity.this, Settings.class);
                 startActivity(intent);
-                //do stuff
                 return true;
+
             case R.id.action_notification:
                 Intent intent3 = new Intent(MainActivity.this, Notifications.class);
                 startActivity(intent3);
@@ -155,14 +122,9 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        public SectionsPagerAdapter(FragmentManager fm) {
+        SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
@@ -182,7 +144,6 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
             return 2;
         }
 
@@ -212,4 +173,3 @@ public class MainActivity extends AppCompatActivity {
         mNotificationManager.notify(001, mBuilder.build());
     }
 }
-

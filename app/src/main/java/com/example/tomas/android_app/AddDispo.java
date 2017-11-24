@@ -17,7 +17,6 @@ public class AddDispo extends AppCompatActivity {
         setContentView(R.layout.add_dispo);
 
         tv= findViewById(R.id.editDisp);
-//        tv.setMovementMethod(new ScrollingMovementMethod());
 
         FloatingActionButton done = findViewById(R.id.doneAD);
         done.setOnClickListener(new View.OnClickListener() {
